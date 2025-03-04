@@ -1,0 +1,61 @@
+\input{/Users/daniel/github/config/preamble-por.sty}%available at github.com/danimalabares/config
+%\input{/Users/daniel/github/config/thms-por.sty}%available at github.com/danimalabares/config
+
+\newcommand{\rightlooparrow}{\mathbin{
+    \vbox{\openup-10.25pt\halign{\hss$##$\hss\cr\circ\cr\longrightarrow\cr}}
+}}
+
+\begin{document}
+\bibliographystyle{alpha}
+
+\begin{minipage}{\textwidth}
+	\begin{minipage}{1\textwidth}
+		Complex geometry\hfill Daniel González Casanova Azuela
+		
+		{\small \hfill\href{https://github.com/danimalabares/cg}{github.com/danimalabares/cg}}
+	\end{minipage}
+\end{minipage}\vspace{.2cm}\hrule
+
+\vspace{10pt}
+{\huge Notes on complex geometry}
+\tableofcontents
+
+
+\section{Basic complex geometry}
+
+Definition of \( \partial \) and \(\bar\partial\)…
+
+\section{Volume form}
+
+{\color{6}dani:} It's
+\[\text{constant} \prod \partial z_i \wedge \bar\partial z_i=\text{const.} \sum dx_i \wedge dy_i\]
+{\color{6}voi:}It's
+\[\frac{\omega^n}{n!}=\prod dz_i \wedge d\bar{z}_i\]
+where \(dz_i=dx_i + \sqrt{-1}dy_i\). It is the volume form of the hermitian manifold, i.e. the unique nowhere-vanishing section of the determinant bundle that gives 1 to the volume of the real unit cube \(e_1 \wedge Ie_1\wedge\ldots\wedge e_n \wedge I e_n\) obtained from an \(h\)-orthonormal complex basis \(\{e_i\}\).
+
+
+\section{Adjunction formula}
+
+\section{Fubini-Study}
+It's a metric, it's a symplectic form. \textit{\textbf{Fubini-Study (symplectic) form}} is a closed 2-form defined on \(\mathbb{C}P^{n}\) as the exterior differential of the logarithm of the length functions \(\ell=\sum |z_i|^2\), i.e. \(\omega=dd^c \operatorname{log} \ell\).
+
+This also has a local expression in coordinates \((z_1,\ldots,z_n)\) that might be interesting.
+
+The \textit{\textbf{Fubini-Study metric}} is \(g(\cdot ,\cdot )=\omega(\cdot ,I\cdot )\).
+
+\section{Hypercomplex manifolds}
+
+\begin{defn}\leavevmode
+	A manifold $M$ is \textit{\textbf{hypercomplex}} if it has three integrable almost complex structures  $I$,  $J$, $K$ satisfying the quaternionic relations $I^2=J^2=K^2=-\operatorname{Id}$ and $I J=-J I=K$.
+\end{defn}
+
+
+\begin{remark}[Obata Connection, GPT]
+    Given a hypercomplex manifold $(M, I, J, K)$, there exists a unique torsion-free connection $\nabla^{\operatorname{ob}}$ such that
+    \[
+    \nabla^{\operatorname{ob}} I = \nabla^{\operatorname{ob}} J = \nabla^{\operatorname{ob}} K = 0.
+    \]
+    This is called the \textit{Obata connection}. Unlike the Levi-Civita connection, it is not necessarily compatible with a metric. Instead, it preserves the entire hypercomplex structure and serves as the natural connection in hypercomplex geometry.
+\end{remark}
+
+\end{document}
